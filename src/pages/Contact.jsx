@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 import config from "../config";
 
 
@@ -95,7 +96,18 @@ const handleSubmit = (e) => {
   ];
 
   return (
-    <section className="space-y-16">
+    <>
+      <Helmet>
+        <title>Contact Tanish Verma - Full Stack Developer</title>
+        <meta name="description" content="Get in touch with Tanish Verma. Contact me for full-stack development projects, collaborations, or opportunities. Available for freelance work." />
+        <meta name="keywords" content="contact Tanish Verma, full stack developer, hire developer, freelance, collaboration" />
+        <meta property="og:title" content="Contact Tanish Verma - Full Stack Developer" />
+        <meta property="og:description" content="Get in touch with Tanish Verma. Contact me for full-stack development projects, collaborations, or opportunities." />
+        <meta property="og:url" content="https://tanishverma.dev/contact" />
+        <meta property="twitter:title" content="Contact Tanish Verma - Full Stack Developer" />
+        <meta property="twitter:description" content="Get in touch with Tanish Verma. Contact me for full-stack development projects, collaborations, or opportunities." />
+      </Helmet>
+      <section className="space-y-16">
       {/* INTRO */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -210,5 +222,6 @@ const handleSubmit = (e) => {
         </form>
       </div>
     </section>
+    </>
   );
 }

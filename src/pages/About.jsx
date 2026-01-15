@@ -7,6 +7,7 @@ import {
   Shield,
   Zap,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function About() {
   const skills = [
@@ -49,7 +50,18 @@ export default function About() {
   ];
 
   return (
-    <div className="space-y-16">
+    <>
+      <Helmet>
+        <title>About Tanish Verma - Full Stack Developer</title>
+        <meta name="description" content="Learn about Tanish Verma, a skilled full-stack developer with expertise in React, Node.js, ERP systems, and modern web technologies. Discover my skills and experience." />
+        <meta name="keywords" content="about Tanish Verma, full stack developer, skills, experience, React, Node.js, ERP" />
+        <meta property="og:title" content="About Tanish Verma - Full Stack Developer" />
+        <meta property="og:description" content="Learn about Tanish Verma, a skilled full-stack developer with expertise in React, Node.js, ERP systems, and modern web technologies." />
+        <meta property="og:url" content="https://tanish-verma-portfolio.vercel.app/about" />
+        <meta property="twitter:title" content="About Tanish Verma - Full Stack Developer" />
+        <meta property="twitter:description" content="Learn about Tanish Verma, a skilled full-stack developer with expertise in React, Node.js, ERP systems, and modern web technologies." />
+      </Helmet>
+      <div className="space-y-16">
       <section className="max-w-4xl">
         {/* Heading */}
         <motion.h2
@@ -161,5 +173,6 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   );
 }

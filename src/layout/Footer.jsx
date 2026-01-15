@@ -12,7 +12,7 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: Mail,
-      href: config.contact.email,
+      href: "mailto: "+config.contact.email,
       label: "Email",
       color: "text-purple-400 hover:text-purple-300",
     },
@@ -52,12 +52,12 @@ export default function Footer() {
           >
             {socialLinks.map((social) => {
               const Icon = social.icon;
+              const isMail = social.label === "Email";
               return (
                 <motion.a
                   key={social.label}
                   href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...(!isMail && { target: "_blank", rel: "noopener noreferrer" })}
                   whileHover={{ scale: 1.2, y: -4 }}
                   whileTap={{ scale: 0.9 }}
                   className={`p-2.5 rounded-lg bg-slate-800/50 border border-slate-700/50 ${social.color} hover:border-indigo-500/50 transition`}

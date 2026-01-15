@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Briefcase, Calendar, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function Experience() {
   const experiences = [
@@ -32,7 +33,18 @@ export default function Experience() {
   ];
 
   return (
-    <div className="space-y-12">
+    
+      <div className="space-y-12">
+         <Helmet>
+        <title>Experience - Tanish Verma Full Stack Developer</title>
+        <meta name="description" content="Explore Tanish Verma's professional experience as a full-stack developer. Learn about my work on ERP systems, API development, and enterprise applications." />
+        <meta name="keywords" content="experience, Tanish Verma, full stack developer, ERP, API, software engineer" />
+        <meta property="og:title" content="Experience - Tanish Verma Full Stack Developer" />
+        <meta property="og:description" content="Explore Tanish Verma's professional experience as a full-stack developer. Learn about my work on ERP systems, API development, and enterprise applications." />
+        <meta property="og:url" content="https://tanish-verma-portfolio.vercel.app/" />
+        <meta property="twitter:title" content="Experience - Tanish Verma Full Stack Developer" />
+        <meta property="twitter:description" content="Explore Tanish Verma's professional experience as a full-stack developer. Learn about my work on ERP systems, API development, and enterprise applications." />
+      </Helmet>
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

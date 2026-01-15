@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import {  Code, Database, Server } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 
 export default function Projects() {
@@ -50,7 +51,18 @@ export default function Projects() {
   ];
 
   return (
-    <div className="space-y-12">
+    <>
+      <Helmet>
+        <title>Projects - Tanish Verma Portfolio</title>
+        <meta name="description" content="Explore Tanish Verma's projects including ERP systems, web applications, and software development work. See my expertise in full-stack development." />
+        <meta name="keywords" content="projects, Tanish Verma, portfolio, ERP, web applications, software development" />
+        <meta property="og:title" content="Projects - Tanish Verma Portfolio" />
+        <meta property="og:description" content="Explore Tanish Verma's projects including ERP systems, web applications, and software development work." />
+        <meta property="og:url" content="https://tanishverma.dev/projects" />
+        <meta property="twitter:title" content="Projects - Tanish Verma Portfolio" />
+        <meta property="twitter:description" content="Explore Tanish Verma's projects including ERP systems, web applications, and software development work." />
+      </Helmet>
+      <div className="space-y-12">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -155,5 +167,6 @@ export default function Projects() {
         })}
       </div>
     </div>
+    </>
   );
 }

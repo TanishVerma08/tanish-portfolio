@@ -7,6 +7,7 @@ import {
   Lock,
   Zap,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import backgroundImage from "../Backgroundimage.jpg";
 
 const whatIDoItems = [
@@ -50,7 +51,18 @@ const whatIDoItems = [
 
 export default function Home() {
   return (
-    <div className="space-y-24 md:space-y-32">
+    <>
+      <Helmet>
+        <title>Tanish Verma - Full Stack Developer Portfolio</title>
+        <meta name="description" content="Welcome to Tanish Verma's portfolio. Discover my expertise in full-stack development, ERP systems, APIs, and modern web technologies using React, Node.js, and more." />
+        <meta name="keywords" content="Tanish Verma, full stack developer, portfolio, React, Node.js, ERP, API development" />
+        <meta property="og:title" content="Tanish Verma - Full Stack Developer Portfolio" />
+        <meta property="og:description" content="Welcome to Tanish Verma's portfolio. Discover my expertise in full-stack development, ERP systems, APIs, and modern web technologies." />
+        <meta property="og:url" content="https://tanish-verma-portfolio.vercel.app/" />
+        <meta property="twitter:title" content="Tanish Verma - Full Stack Developer Portfolio" />
+        <meta property="twitter:description" content="Welcome to Tanish Verma's portfolio. Discover my expertise in full-stack development, ERP systems, APIs, and modern web technologies." />
+      </Helmet>
+      <div className="space-y-24 md:space-y-32">
 
       {/* ================= HERO ================= */}
       <motion.section
@@ -296,5 +308,6 @@ export default function Home() {
       </section>
 
     </div>
+    </>
   );
 }

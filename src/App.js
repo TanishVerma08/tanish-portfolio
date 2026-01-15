@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
+import { HelmetProvider } from "react-helmet-async";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -34,7 +35,7 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <HelmetProvider>
       <Navbar activeSection={activeSection} />
       <main className="max-w-7xl mx-auto px-6 py-16">
         <section id="home" className="min-h-screen">
@@ -62,6 +63,6 @@ export default function App() {
         </section>
       </main>
       <Footer />
-    </>
+    </HelmetProvider>
   );
 }
