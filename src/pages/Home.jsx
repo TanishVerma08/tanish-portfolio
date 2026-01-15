@@ -58,7 +58,7 @@ export default function Home() {
         <meta name="keywords" content="Tanish Verma, full stack developer, portfolio, React, Node.js, ERP, API development" />
         <meta property="og:title" content="Tanish Verma - Full Stack Developer Portfolio" />
         <meta property="og:description" content="Welcome to Tanish Verma's portfolio. Discover my expertise in full-stack development, ERP systems, APIs, and modern web technologies." />
-        <meta property="og:url" content="https://tanish-verma-portfolio.vercel.app/" />
+        <meta property="og:url" content="https://tanish-verma-portfolio.vercel.app" />
         <meta property="twitter:title" content="Tanish Verma - Full Stack Developer Portfolio" />
         <meta property="twitter:description" content="Welcome to Tanish Verma's portfolio. Discover my expertise in full-stack development, ERP systems, APIs, and modern web technologies." />
       </Helmet>
