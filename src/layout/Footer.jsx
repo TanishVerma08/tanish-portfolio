@@ -12,7 +12,7 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: Mail,
-      href: "mailto: "+config.contact.email,
+      href: "mailto:  "+config.contact.email,
       label: "Email",
       color: "text-purple-400 hover:text-purple-300",
     },
